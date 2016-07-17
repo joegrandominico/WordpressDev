@@ -1,0 +1,7 @@
+//Put this code at the bottom of functions.php
+
+// Function to do stuff! Use by adding [dostuff] to post. 
+  function dostuff_shortcode() {
+    return 'Add whatever stuff you want to do here. It can be text / html';
+}
+add_shortcode('dostuff', 'dostuff_shortcode');
