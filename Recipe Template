@@ -1,0 +1,65 @@
+<?php
+/**
+ * The template for displaying all pages.
+ * 
+ * Template Name: All posts by Food
+ *
+ * @package Adelle
+ */
+get_header() ?>
+
+  <main role="main" class="section" id="section">
+
+    <?php if( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <style>
+    a.grid {
+    text-align: center;
+    width: 170px;
+display: block;
+float: left;
+margin-right: 14px;
+height: 180px;
+margin-bottom: 20px;
+overflow:hidden;
+}
+    </style>
+    <article class="article article-page" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <header class="post-header">
+        <h1 class="post-title entry-title" itemprop="headline">Recipes</h1>
+      </header>
+<a class="grid" href="http://beamingbanana.com/category/breads-breakfast/"><h3>Breads</h3><img src="http://beamingbanana.com/wp-content/uploads/2016/07/Breads.jpg"/></a>
+
+<a class="grid" href="http://beamingbanana.com/category/brownies-and-bars/"><h3>Brownies and Bars</h3><img src="http://beamingbanana.com/wp-content/uploads/2016/07/Brownies.jpg"/></a>
+
+<a class="grid" href="http://beamingbanana.com/category/cakes-and-cupcakes/"><h3>Cakes and Cupcakes</h3><img src="http://beamingbanana.com/wp-content/uploads/2016/07/Cakes.jpg"/></a>
+
+<a class="grid" href="http://beamingbanana.com/category/chocolate/"><h3>Chocolate</h3><img src="http://beamingbanana.com/wp-content/uploads/2016/07/Chocolate.jpg"/></a>
+
+<a class="grid" href="http://beamingbanana.com/category/cookies/"><h3>Cookies</h3><img src="http://beamingbanana.com/wp-content/uploads/2016/07/Cookies.jpg"/></a>
+
+<a class="grid" href="http://beamingbanana.com/category/dinners/"><h3>Dinner</h3><img src="http://beamingbanana.com/wp-content/uploads/2016/07/Dinner.jpg"/></a>
+
+<a class="grid" href="http://beamingbanana.com/category/doughnuts-and-muffins/"><h3>Doughnuts and Muffins</h3><img src="http://beamingbanana.com/wp-content/uploads/2016/07/Doughnuts.jpg"/></a>
+
+<a class="grid" href="http://beamingbanana.com/category/nice-cream/"><h3>Nice Cream</h3><img src="http://beamingbanana.com/wp-content/uploads/2016/07/NiceCream.jpg"/></a>
+
+<a class="grid" href="http://beamingbanana.com/category/oats/"><h3>Oats</h3><img src="http://beamingbanana.com/wp-content/uploads/2016/07/Oats.jpg"/></a>
+
+<a class="grid" href="http://beamingbanana.com/category/pancakes-and-waffles/"><h3>Pancakes and Waffles</h3><img src="http://beamingbanana.com/wp-content/uploads/2016/07/Pancakes.jpg"/></a>
+
+<a class="grid" href="http://beamingbanana.com/category/pies-and-tarts/"><h3>Pies and Tarts</h3><img src="http://beamingbanana.com/wp-content/uploads/2016/07/Pies.jpg"/></a>
+
+<a class="grid" href="http://beamingbanana.com/category/snacks/"><h3>Snacks</h3><img src="http://beamingbanana.com/wp-content/uploads/2016/07/Snacks.jpg"/></a>
+    </article>
+    <?php endwhile; ?>
+
+      <?php echo adelle_theme_pagination_links(); ?>
+
+    <?php else : get_template_part( 'content', 'none' ); endif; ?>
+
+
+  </main><!-- .section -->
+
+  <?php get_sidebar(); ?>
+
+<?php get_footer(); ?>
